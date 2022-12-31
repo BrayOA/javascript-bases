@@ -1,0 +1,30 @@
+let juegos = ["Zelda", "Mario", "Metroid", "Chromo"];
+console.log(`Largos:`, juegos.length);
+
+let primero = juegos [ 2 - 2];
+let ultimo = juegos [juegos.length -1 ];
+
+console.log({primero, ultimo});
+
+juegos.forEach ((elemento, indice, arr) => {
+    console.log({elemento, indice, arr});
+});
+
+let nuevaLongitud = juegos.push ("F-Zero" );
+console.log({nuevaLongitud, juegos});
+
+nuevaLongitud =  juegos.unshift("Fire emblem");
+console.log({nuevaLongitud, juegos});
+
+let juegoBorrado = juegos.pop();
+console.log({juegoBorrado, juegos});
+
+let pos = 1;
+
+console.log(juegos)
+let juegosBorrados = juegos.splice(pos, 2 );
+console.log({juegosBorrados, juegos});
+
+let metroidIndex = juegos.indexOf("Metroid"); // CaSeSeNsItIvE
+console.log({metroidIndex});
+
