@@ -14,7 +14,6 @@ class Singleton {
         Singleton.instancia = this;
         this.nombre = nombre;
 
-        // return this;
     }
 
 
