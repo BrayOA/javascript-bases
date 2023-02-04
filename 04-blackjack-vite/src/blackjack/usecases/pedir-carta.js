@@ -1,6 +1,10 @@
-// Esta función me permite tomar una carta
 
-
+/**
+ *
+ // Esta función me permite tomar una carta
+ * @param {Array<String>*} deck  es un arreglo de string
+ * @returns {String} retorna la carta del deck
+ */
 
 
 export const pedirCarta = (deck) => {
