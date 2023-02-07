@@ -1,16 +1,16 @@
-
+import {v4 as uuid} from 'uuid';
 
 
 export class Todo {
 
     /**
      *
-     * @param {String} descripcion
+     * @param {String} description
      */
 
-    constructor (descripcion){
-        this.id = 1;
-        this.descripcion = descripcion;
+    constructor (description){
+        this.id = uuid();
+        this.descripcion = description;
         this.done = false;
         this.createdAt =  new Date();
     }
