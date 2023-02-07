@@ -26,7 +26,19 @@ const loadStore = ()=>{
 }
 
 const getTodos = (filter = Filters.All)=>{
-    throw Error ('not implemented');
+
+    switch(filter){
+        case Filters.All:
+            return [...state.todos];
+        case Filters.Completed:
+            return state.todos.filter(todos => todos.done);
+        case Filters.Pending:
+            return state.todos.filter(todos => !todos.done);
+
+        default :
+            throw Error (`option ${filter}is not valid.`);
+
+    }
 }
 
 
@@ -37,7 +49,7 @@ const getTodos = (filter = Filters.All)=>{
  */
 
 
-const addstore = (description)=>{
+const addsTodo = (description)=>{
     throw Error ('not implemented');
 
 }
@@ -83,6 +95,7 @@ export default {
     loadStore,
     toggleTodo,
     deleteTodo,
+    getTodos,
     deleteCompleted,
     setFilter,
     getCurrentFilter,
