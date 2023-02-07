@@ -49,8 +49,9 @@ const getTodos = (filter = Filters.All)=>{
  */
 
 
-const addsTodo = (description)=>{
-    throw Error ('not implemented');
+const addTodo = (description)=>{
+    if (!description) throw new Error ('Description is required');
+    state.todos.push(new Todo (description));
 
 }
 
@@ -64,17 +65,23 @@ const toggleTodo = (todoId)=>{
 }
 
 const deleteTodo = (todoId)=>{
-    throw Error ('not implemented');
+    state.todos = state.todos.filter(todo =>todo.id !== todoId);
 
 }
 
 const deleteCompleted = ()=>{
-    throw Error ('not implemented');
+    state.todos = state.todos.filter(todo =>todo.done);
+
 
 }
 
+/**
+ *
+ * @param {Filters} newFilter
+ */
+
 const setFilter = (newFilter= Filters.All)=>{
-    throw Error ('not implemented');
+    state.filter = newFilter;
 
 }
 
@@ -92,6 +99,7 @@ const getCurrentFilter = ()=>{
 
 export default {
     initStore,
+    addTodo,
     loadStore,
     toggleTodo,
     deleteTodo,
