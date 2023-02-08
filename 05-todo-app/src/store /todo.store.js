@@ -11,6 +11,9 @@ const state = {
         new Todo ('piedra del alma'),
         new Todo ('piedra del infinito'),
         new Todo ('piedra del tiempo'),
+        new Todo ('piedra del poder'),
+        new Todo ('piedra del realidad'),
+
     ],
     filter : Filters.All,
 }
@@ -60,7 +63,12 @@ const addTodo = (description)=>{
  * @param {String} todoId
  */
 const toggleTodo = (todoId)=>{
-    throw Error ('not implemented');
+    state.todos = state.todos.map(todo =>{
+        if(todo.id === todoId){
+            todo.done = !todo.done;
+        }
+        return todo;
+    });
 
 }
 
@@ -81,12 +89,13 @@ const deleteCompleted = ()=>{
  */
 
 const setFilter = (newFilter= Filters.All)=>{
+
     state.filter = newFilter;
 
 }
 
 const getCurrentFilter = ()=>{
-    throw Error ('not implemented');
+    return state.filter;
 
 }
 
