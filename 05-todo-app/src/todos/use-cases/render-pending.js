@@ -2,12 +2,11 @@ import todoStore, { Filters } from '../../store/todo.store';
 
 let element;
 /**
- * 
- * @param {String} elementId 
+ * @param {String} elementId
  */
 export const renderPending = ( elementId ) => {
 
-    if ( !element ) 
+    if ( !element )
         element = document.querySelector( elementId );
 
     if ( !element )

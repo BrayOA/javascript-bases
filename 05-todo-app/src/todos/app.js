@@ -12,7 +12,6 @@ const ElementIDs = {
 }
 
 /**
- *
  * @param {String} elementId
  */
 export const App = ( elementId ) => {
@@ -34,7 +33,6 @@ export const App = ( elementId ) => {
         document.querySelector(elementId).append( app );
         displayTodos();
     })();
-
 
     // Referencias HTML
     const newDescriptionInput = document.querySelector( ElementIDs.NewTodoInput );
@@ -94,8 +92,6 @@ export const App = ( elementId ) => {
 
         });
 
-
     });
-
 
 }

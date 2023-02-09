@@ -4,15 +4,14 @@ import { createTodoHTML } from './';
 let element;
 
 /**
- * 
- * @param {String} elementId 
- * @param {Todo} todos 
+ * @param {String} elementId
+ * @param {Todo} todos
  */
 export const renderTodos = ( elementId, todos = [] ) => {
 
     if ( !element )
         element = document.querySelector( elementId );
-    
+
     if ( !element ) throw new Error(`Element ${ elementId } not found`);
 
     element.innerHTML = '';
