@@ -1,4 +1,4 @@
-import {heroes} from '../data/heroes';
+import { heroes } from '../data/heroes';
 
 /**
  *
@@ -8,8 +8,8 @@ import {heroes} from '../data/heroes';
 export const callbacksComponent = (element) => {
 
     const id = '5d86371fd55e2e2a30fe1ccb1';
-    findHero (id, (drStrange) =>{
-        element.innerHTML = drStrange.name;
+    findHero (id, (hero) =>{
+        // element.innerHTML = hero?.name || 'No hay heroe';
     });
 
 }

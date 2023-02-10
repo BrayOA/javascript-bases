@@ -1,6 +1,6 @@
 import './style.css'
 import javascriptLogo from './javascript.svg'
-// import { environmentsComponent } from './src/consepts/01-environmets';
+import { environmentsComponent } from './src/consepts/01-environmets';
 import { callbacksComponent } from './src/consepts/02-callbacks';
 
 
