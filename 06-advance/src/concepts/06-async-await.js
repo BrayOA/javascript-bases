@@ -1,7 +1,7 @@
 import { heroes } from '../data/heroes'
 /**
- *
- * @param {HTMLDivElement} element
+ * 
+ * @param {HTMLDivElement} element 
  */
 export const asyncAwaitComponent = async( element ) => {
 
@@ -11,9 +11,9 @@ export const asyncAwaitComponent = async( element ) => {
     try {
         const hero1 = await findHero( id1 );
         const hero2 = await findHero( id2 );
-
+    
         element.innerHTML = `${ hero1.name } / ${ hero2.name }`;
-
+        
     } catch (error) {
         element.innerHTML = error;
     }
@@ -31,4 +31,3 @@ const findHero = async( id ) => {
     return hero;
 
 }
-

@@ -1,7 +1,7 @@
 import { heroes } from '../data/heroes';
 /**
- *
- * @param {HTMLDivElement} element
+ * 
+ * @param {HTMLDivElement} element 
  */
 export const forAwaitComponent = async( element ) => {
 
@@ -12,17 +12,17 @@ export const forAwaitComponent = async( element ) => {
 
     for await( const hero of heroPromises ) {
         element.innerHTML += `${ hero.name } <br/> `
-    }
+    }    
 
 }
 
 /**
- *
- * @param {Array<String>} heroIds
+ * 
+ * @param {Array<String>} heroIds 
  * @returns {Array<Promise>}
  */
 const getHeroesAsync = ( heroIds ) => {
-
+    
     const heroPromises = [];
 
     heroIds.forEach( id => {

@@ -1,8 +1,8 @@
 import { heroes } from '../data/heroes';
 
 /**
- *
- * @param {HTMLDivElement} element
+ * 
+ * @param {HTMLDivElement} element 
  */
 export const callbacksComponent = ( element ) => {
 
@@ -29,9 +29,9 @@ export const callbacksComponent = ( element ) => {
 
 
 /**
- *
- * @param {String} id
- * @param { ( error: String|Null, hero: Object)=> void } callback
+ * 
+ * @param {String} id 
+ * @param { ( error: String|Null, hero: Object)=> void } callback 
  */
 const findHero = ( id, callback ) => {
 
@@ -44,3 +44,4 @@ const findHero = ( id, callback ) => {
 
     callback( null, hero );
 }
+

@@ -1,8 +1,8 @@
 import { heroes } from '../data/heroes';
 
 /**
- *
- * @param {HTMLDivElement} element
+ * 
+ * @param {HTMLDivElement} element 
  */
 export const generatorsAsyncComponent = async( element ) => {
 
@@ -21,7 +21,7 @@ export const generatorsAsyncComponent = async( element ) => {
 }
 
 async function* getHeroGenerator() {
-
+    
     for ( const hero of heroes ) {
         await sleep();
         yield hero.name;
@@ -38,3 +38,5 @@ const sleep = () => {
         }, 500);
     })
 }
+
+

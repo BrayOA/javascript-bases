@@ -1,7 +1,7 @@
 
 /**
- *
- * @param {HTMLDivElement} element
+ * 
+ * @param {HTMLDivElement} element 
  */
  export const generatorFunctionsComponent = ( element ) => {
 
@@ -37,7 +37,11 @@ function* myFirstGeneratorFunction() {
     yield 'Segundo valor';
     yield 'Tercer valor';
     yield 'Cuarto valor';
-
+    
     return 'Ya no hay valores';
     yield 'Ya no pueden hacer nada';
 }
+
+
+
+
